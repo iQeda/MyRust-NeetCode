@@ -1,6 +1,9 @@
 # MyRust-NeetCode
 
-RustでNeetCode/LeetCode問題を解くプロジェクト
+Rust で NeetCode/LeetCode 問題を解くプロジェクト
+
+- https://neetcode.io/roadmap
+- https://leetcode.com/u/iQeda/
 
 ## セットアップ
 
@@ -19,9 +22,9 @@ leetcode plugin -i cookie.chrome
 leetcode config lang rust
 ```
 
-### LeetCode認証 (Cookie方式)
+### LeetCode 認証 (Cookie 方式)
 
-leetcode-cliの通常ログインは動作しないため、Cookie認証を使用する。
+leetcode-cli の通常ログインは動作しないため、Cookie 認証を使用する。
 
 1. ブラウザで https://leetcode.com にログイン
 2. 開発者ツール (F12) → Application → Cookies → `https://leetcode.com`

@@ -1,6 +1,6 @@
 ---
 name: lc-test
-description: Test a Rust solution file against LeetCode's test cases
+description: Test a Rust solution file against LeetCode's test cases (project)
 ---
 
 # LeetCode Test
@@ -9,10 +9,11 @@ Test a solution file against LeetCode's test cases.
 
 ## Usage
 
-`/lc-test <filename>` - Test the solution file
+`/lc-test <file>` - Test the solution file (e.g., `problems/1.two-sum.rs`)
 
 ## Instructions
 
-Run `leetcode test <filename> 2>/dev/null` and show the results to the user.
+1. Run `leetcode test <file> 2>&1` and show the results to the user
+2. If only problem ID is provided, find the file in `problems/` directory
 
-If no filename is provided, look for the most recently modified .rs file in the current directory.
+Note: leetcode test may have timeout issues. If it hangs, use `leetcode submit` directly.

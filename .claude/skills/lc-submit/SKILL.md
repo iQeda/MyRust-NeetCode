@@ -1,6 +1,6 @@
 ---
 name: lc-submit
-description: Submit a Rust solution file to LeetCode
+description: Submit a Rust solution file to LeetCode (project)
 ---
 
 # LeetCode Submit
@@ -9,10 +9,9 @@ Submit a solution file to LeetCode.
 
 ## Usage
 
-`/lc-submit <filename>` - Submit the solution file
+`/lc-submit <file>` - Submit the solution file (e.g., `problems/1.two-sum.rs`)
 
 ## Instructions
 
-1. Confirm with the user before submitting
-2. Run `leetcode submit <filename> 2>/dev/null`
-3. Show the submission results to the user
+1. If only problem ID is provided, find the file in `problems/` directory
+2. Run `leetcode submit <file> 2>&1` and show the results to the user
