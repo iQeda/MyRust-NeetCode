@@ -32,6 +32,37 @@ let s: &str = "hello";           // 文字列スライス（固定）
 let s: String = String::from("hello");  // 可変文字列
 ```
 
+### `&` とは？（参照）
+
+`&str` の `&` は **参照（reference）** を表す。データそのものではなく、データへの「ポインタ」。
+
+```rust
+let s: String = String::from("hello");  // String はデータを所有
+let r: &String = &s;                    // &String は s への参照
+let slice: &str = &s;                   // &str は文字列データへの参照
+```
+
+| 型 | 意味 | 所有権 |
+|----|------|--------|
+| `String` | 文字列データそのもの | 所有する |
+| `&String` | String への参照 | 借りている |
+| `&str` | 文字列スライスへの参照 | 借りている |
+
+**なぜ `&str` が使われるか：**
+- `"hello"` のようなリテラルはバイナリに埋め込まれる
+- そのデータへの参照として `&str` を使う
+- コピーせずにデータを参照できるので効率的
+
+```rust
+fn greet(name: &str) {       // 参照を受け取る（コピーしない）
+    println!("Hello, {}", name);
+}
+
+let s = String::from("World");
+greet(&s);      // String を &str として渡せる
+greet("World"); // リテラルはそのまま &str
+```
+
 ## 型推論
 
 ```rust
